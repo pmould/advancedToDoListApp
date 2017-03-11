@@ -1,14 +1,13 @@
 import React from 'react';
-import {updateTodoChecked} from '../../actions/todos';
+
 class ListItem extends React.Component {
     update
     render() {
-        const {actions} = this.props;
+        const {actions, todo} = this.props;
         return (
             <div className="row row--list-item">
-                <input className="list-item__checkbox" type="checkbox" onChange={(e) => actions.updateTodoChecked(e.target.checked, this.props.todo.id)} checked={this.props.todo.completed}/>
-                { }
-                <span>
+                <input className="list-item__checkbox" type="checkbox" onChange={(e) => actions.updateTodoChecked(e.target.checked, todo.id)} checked={this.props.todo.completed}/>
+                <span style={{textDecoration: (todo.completed) ? 'line-through': 'initial'}}>
                     {this.props.todo.title}
                 </span>
             </div>

@@ -6,7 +6,7 @@ export default (state = getInitialState(), action) => {
             const todo = action.payload;
 
             return state.push(todo);
-        case actions.UPDADE_TODO_CHECKED:
+        case actions.UPDATE_TODO_CHECKED:
         const {id, checked} = action.payload;
             return state.map((todo) => {
                 if (todo.id === id) {
@@ -15,6 +15,17 @@ export default (state = getInitialState(), action) => {
                 }
                 return todo;
             });
+        case actions.REMOVE_TODOS:
+            const newState = state;
+            action.payload.forEach((id) => {
+                newState = newState.reduce((todos, todo) => {
+                    if (todo.id === id) {
+                        return todos;
+                    }
+                    return todos.push(todo);
+                }, List());
+            });
+            return newState;
         default: return state; 
     }
 }
