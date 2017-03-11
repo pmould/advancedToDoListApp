@@ -1,0 +1,90 @@
+html, body, #root, .container {
+    height: 100%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.todo-container {
+    max-width: 720px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 100%;
+
+}
+.col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.title__container {
+    flex: 1;
+}
+
+.app__container {
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 15px;
+}
+
+.row--list-item {
+    justify-content: flex-start;
+     align-items: center;
+    font-size: 2em;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+}
+
+.btn {
+    margin: 0 .5em;
+}
+
+.header__wrapper {
+    height: 40px;
+}
+
+.header__wrapper input {
+    font-size: 2em;
+}
+
+.header__wrapper .btn {
+    font-size: 1.2em;
+}
+
+.header__input {
+    flex: 2;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.list-item__container {
+    margin: 40px 0;
+}
+
+.list-item__checkbox {
+    margin: 1em;
+}
+
+.footer__container {
+    justify-content: space-between;
+    font-size: 1.2em;
+}
