@@ -21,7 +21,8 @@ class App extends React.Component {
 
 const select = (state) => {
     return {
-        todos: state.todos
+        todos: state.todos,
+        filterState: state.filters
     };
 }
 

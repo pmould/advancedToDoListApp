@@ -58,6 +58,15 @@ body {
     margin: 0 .5em;
 }
 
+.btn--filter {
+    padding: 6px;
+}
+
+.filter-selected {
+    background: brown;
+    color: white;
+}
+
 .header__wrapper {
     height: 40px;
 }

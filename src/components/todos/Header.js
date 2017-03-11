@@ -4,11 +4,12 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {currentText: ''};
+        this.id = 0;
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.actions.addTodo({title: this.state.currentText, completed: false});
+        this.props.actions.addTodo({title: this.state.currentText, completed: false, id: this.id++});
         this.setState({currentText: ''});
     }
 

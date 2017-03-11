@@ -6,7 +6,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="row footer__container">
-                <Filters/>
+                <Filters {...this.props}/>
                 <span className="btn">
                 <span className="btn">Clear</span>
                 <span className="btn">Clear All</span>

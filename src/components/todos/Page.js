@@ -14,11 +14,15 @@ class Page extends React.Component {
                     <div className="app__container">
                         <Header {...this.props}/>
                         <div className="list-item__container">
-                            {this.props.todos.map((todo, index) => (
-                                <ListItem key={index} todo={todo}/>
-                            ))}
+                            {this.props.todos.map((todo, index) => {
+                                return (
+                                (this.props.filterState === 'all'
+                                || this.props.filterState === 'not-completed' && todo.completed == false 
+                                || this.props.filterState === 'completed' && todo.completed == true)
+                                ? <ListItem key={todo.id} todo={todo} {...this.props}/>: null);
+                            })}
                         </div>
-                        <Footer/>
+                        <Footer {...this.props}/>
                     </div>
                 </div>
             </div>
