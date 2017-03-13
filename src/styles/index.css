@@ -91,6 +91,16 @@ body {
     font-size: 13.33px;
 }
 
+.header__wrapper input[type='checkbox'].hidden {
+    visibility: hidden;
+}
+
+.header__wrapper input[type='checkbox'] {
+    margin: 1em;
+    font-size: 13.33px;
+}
+
+
 .header__wrapper input {
     font-size: 2em;
 }
