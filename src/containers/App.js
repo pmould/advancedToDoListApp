@@ -27,7 +27,6 @@ const select = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    console.log('actions', actions);
     return {
         actions: bindActionCreators(actions, dispatch)
     }

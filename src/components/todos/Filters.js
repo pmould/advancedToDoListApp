@@ -6,12 +6,13 @@ class Filters extends React.Component {
         }
 
     render() {
+        const {filterState} = this.props;
         return (
             <span>
                 Filters:
-                <span className="btn btn--filter" onClick={this.filterClick.bind(null, 'all')}>All</span>
-                <span className="btn btn--filter" onClick={this.filterClick.bind(null, 'completed')}>Completed</span>
-                <span className="btn btn--filter" onClick={this.filterClick.bind(null, 'not-completed')}>Not Completed</span>
+                <span className={filterState==='all'? 'btn btn--filter filter-selected': 'btn btn--filter'} onClick={this.filterClick.bind(null, 'all')}>All</span>
+                <span className={filterState=== 'completed'? 'btn btn--filter filter-selected': 'btn btn--filter'} onClick={this.filterClick.bind(null, 'completed')}>Completed</span>
+                <span className={filterState==='not-completed'? 'btn btn--filter filter-selected': 'btn btn--filter'} onClick={this.filterClick.bind(null, 'not-completed')}>Not Completed</span>
             </span>
         );
     }

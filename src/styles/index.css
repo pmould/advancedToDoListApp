@@ -36,14 +36,11 @@ body {
 }
 
 .title__container {
-    flex: 1;
+
 }
 
 .app__container {
-    flex: 2;
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 15px;
+    margin: 30% 15px 15px 15px;
 }
 
 .row--list-item {
@@ -54,8 +51,25 @@ body {
     padding: 10px 0;
 }
 
+.edit-item {
+    font-size: 1em;
+    width: 100%;
+}
+
+.cancel-item {
+    visibility: hidden;
+    color: gray;
+    cursor: pointer;
+    font-size: .8em;
+}
+
+.row--list-item:hover .cancel-item {
+    visibility: visible;
+}
+
 .btn {
     margin: 0 .5em;
+    cursor: pointer;
 }
 
 .btn--filter {
@@ -69,6 +83,12 @@ body {
 
 .header__wrapper {
     height: 40px;
+}
+
+
+.header__wrapper input[type='checkbox']{
+    margin: 1em;
+    font-size: 13.33px;
 }
 
 .header__wrapper input {
@@ -87,6 +107,8 @@ body {
 
 .list-item__container {
     margin: 40px 0;
+    max-height: 500px;
+    overflow: auto;
 }
 
 .list-item__checkbox {

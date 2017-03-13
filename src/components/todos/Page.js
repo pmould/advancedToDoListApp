@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import ListItem from './ListItem';
+import ListItems from './ListItems';
 import Footer from './Footer';
-
+import {List} from 'immutable';
 class Page extends React.Component {
     render() {
+         const {filterState, todos} = this.props;
+
         return (
             <div className="container col">
                 <div className="todo-container">
@@ -13,15 +15,7 @@ class Page extends React.Component {
                     </div>
                     <div className="app__container">
                         <Header {...this.props}/>
-                        <div className="list-item__container">
-                            {this.props.todos.map((todo, index) => {
-                                return (
-                                (this.props.filterState === 'all'
-                                || this.props.filterState === 'not-completed' && todo.completed == false 
-                                || this.props.filterState === 'completed' && todo.completed == true)
-                                ? <ListItem key={todo.id} todo={todo} {...this.props}/>: null);
-                            })}
-                        </div>
+                        <ListItems {...this.props}/>
                         <Footer {...this.props}/>
                     </div>
                 </div>

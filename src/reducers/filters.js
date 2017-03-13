@@ -4,6 +4,8 @@ export default (state = getInitialState(), action) => {
     switch(action.type) {
         case actions.FILTER_TODOS:
             return action.payload;
+        case actions.ADD_TODO:
+            return 'all';
         default: return state; 
     }
 }
