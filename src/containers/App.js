@@ -1,4 +1,5 @@
 import React from 'react';
+import 'normalize.css/normalize.css';
 import '../styles/index.css';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';

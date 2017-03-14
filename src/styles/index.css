@@ -7,6 +7,10 @@ h1 {
     font-family: cursive;
 }
 
+button, input, optgroup, select, textarea {
+    font-size: initial;
+}
+
 body {
     margin: 0;
     background: linen;
@@ -54,6 +58,7 @@ body {
     font-size: 2em;
     border-bottom: 1px solid lightgray;
     padding: 10px 0;
+    height: 65.6px;
 }
 
 .edit-item {
