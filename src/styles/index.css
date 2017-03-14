@@ -6,6 +6,7 @@ h1 {
     font-size: 3em;
     font-family: cursive;
     color: brown;
+    font-weight: normal;
 }
 
 button, input, optgroup, select, textarea {
