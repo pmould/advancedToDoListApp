@@ -4,10 +4,12 @@ html, body, #root, .container {
 
 h1 {
     font-size: 3em;
+    font-family: cursive;
 }
 
 body {
     margin: 0;
+    background: linen;
 }
 
 .container {
