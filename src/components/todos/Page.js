@@ -15,8 +15,12 @@ class Page extends React.Component {
                     </div>
                     <div className="app__container">
                         <Header {...this.props}/>
-                        <ListItems {...this.props}/>
-                        <Footer {...this.props}/>
+                        {todos.size > 0 &&
+                        [<ListItems {...this.props}/>,
+                        <Footer {...this.props}/>]}
+                    </div>
+                    <div className="page-footer">
+                        Created by <a target="_blank" href='http://pmouldeveloper.co'>Paul Mould</a>
                     </div>
                 </div>
             </div>

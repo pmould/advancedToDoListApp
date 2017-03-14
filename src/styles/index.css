@@ -5,6 +5,7 @@ html, body, #root, .container {
 h1 {
     font-size: 3em;
     font-family: cursive;
+    color: brown;
 }
 
 button, input, optgroup, select, textarea {
@@ -46,7 +47,7 @@ body {
 }
 
 .app__container {
-    margin: 30% 15px 15px 15px;
+    margin: 10% 15px 15px 15px;
     background: antiquewhite;
     padding: 20px;
     box-shadow: 1px 2px 3px grey;
@@ -58,7 +59,7 @@ body {
     font-size: 2em;
     border-bottom: 1px solid lightgray;
     padding: 10px 0;
-    height: 65.6px;
+    /*min-height: 65.6px;*/
 }
 
 .edit-item {
@@ -121,12 +122,22 @@ body {
 
 .header__wrapper .btn {
     font-size: 1.2em;
+    background: white;
+    color: gray;
+    border-radius: 4px;
+}
+
+.header__wrapper .btn:hover {
+    background: brown;
+    color: white;
 }
 
 .header__input {
     flex: 2;
     border: none;
-    border-bottom: 1px solid gray;
+    /*border-bottom: 1px solid gray;*/
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .list-item__container {
@@ -143,3 +154,15 @@ body {
     justify-content: space-between;
     font-size: 1.2em;
 }
+
+.page-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: .9em; 
+    color: gray;  
+}
+.page-footer a {
+    color: gray;
+    text-decoration: none;
+}
+
