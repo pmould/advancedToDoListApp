@@ -61,6 +61,10 @@ body {
     width: 100%;
 }
 
+.edit-item--input {
+    margin-left: 40px;
+}
+
 .cancel-item {
     visibility: hidden;
     color: gray;
