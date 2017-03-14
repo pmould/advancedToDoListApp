@@ -8,6 +8,10 @@ class ListItems extends React.Component {
         this.state = {editable: false, editText: '', id: null};
     }
 
+    editTodo = (todo) => {
+        todo.id !== this.state.id && this.setState({editable: true, editText: todo.get('title'), id: todo.get('id')});
+    }
+
     isEditable(id) {
         return this.state.id === id;
     }
@@ -30,7 +34,7 @@ class ListItems extends React.Component {
                     (filterState === 'all'
                     || filterState === 'not-completed' && todo.get('completed') == false 
                     || filterState === 'completed' && todo.get('completed') == true)
-                    ? todosList.push(<ListItem key={todo.get('id')} editable={this.isEditable(todo.get('id'))} key={todo.get('id')} todo={todo} {...{...this.props, state: this.state}} updateTodo={this.updateTodo} clearState={this.clearState} />): todosList);
+                    ? todosList.push(<ListItem key={todo.get('id')} editable={this.isEditable(todo.get('id'))} key={todo.get('id')} todo={todo} {...{...this.props, state: this.state}} updateTodo={this.updateTodo} clearState={this.clearState} editTodo={this.editTodo} />): todosList);
                 }, List())}
             </div>
         );

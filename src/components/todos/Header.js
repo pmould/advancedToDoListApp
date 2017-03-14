@@ -21,7 +21,7 @@ class Header extends React.Component {
                     <input type="checkbox" className={!todos.size ? 'hidden': ''} onChange={e => actions.completeAllTodos(e.target.checked)}/>
                     <input onChange={(e) => {this.setState({currentText: e.target.value})}} className="header__input" type="text" placeholder="Enter a Todo Item" value={this.state.currentText}/>
                 {" "}
-                    <input className="btn" type="submit" value="Add item" />
+                    <input disabled={!this.state.currentText ? 'true' : null} className="btn" type="submit" value="Add item" />
             </form>
         );
     }
